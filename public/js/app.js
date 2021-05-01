@@ -7,7 +7,7 @@ form.addEventListener('submit', e => {
     loading.setAttribute('src', '/img/loading.svg');
     let location = form.elements.location.value.trim();
     infobox.appendChild(loading);
-    fetch(`http://localhost:3000/weather?adress=${location}`)
+    fetch(`/weather?adress=${location}`)
         .then(res => {
             return res.json()
         })
